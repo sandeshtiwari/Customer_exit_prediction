@@ -49,8 +49,10 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 # Initialising the ANN
+classifier = Sequential()
 
-
+# Adding the input layer and the first hidden layer
+classifier.add(Dense(units = 6, activation='relu', kernel_initializer = 'uniform' ))
 
 
 
