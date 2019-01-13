@@ -63,7 +63,8 @@ classifier.add(Dense(units = 1, activation='sigmoid', kernel_initializer = 'unif
 # Compiling the ANN
 classifier.compile(optimizer="adam", loss="binary_crossentropy", metrics = ["accuracy"])
 
-
+# Train the ANN using the fit method
+classifier.fit(x=X_train, y=y_train, batch_size=10, epochs=100)
 
 
 
