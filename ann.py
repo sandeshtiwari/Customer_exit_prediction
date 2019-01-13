@@ -47,7 +47,7 @@ import keras
 from keras.models import Sequential
 # Importing the type of layer we'll be using
 from keras.layers import Dense
-
+from keras.optimizers import Adam
 # Initialising the ANN
 classifier = Sequential()
 
@@ -60,8 +60,9 @@ classifier.add(Dense(units = 6, activation='relu', kernel_initializer = 'uniform
 # Adding the output layer
 classifier.add(Dense(units = 1, activation='sigmoid', kernel_initializer = 'uniform'))
 
+opt = Adam(lr=0.01)
 # Compiling the ANN
-classifier.compile(optimizer="adam", loss="binary_crossentropy", metrics = ["accuracy"])
+classifier.compile(optimizer=opt, loss="binary_crossentropy", metrics = ["accuracy"])
 
 # Train the ANN using the fit method
 classifier.fit(x=X_train, y=y_train, batch_size=10, epochs=100)
