@@ -28,7 +28,7 @@ X[:,2] = labelencoder_X_2.fit_transform(X[:,2])
 # One-hot-encoder for 'country' column
 onehotencoder = OneHotEncoder(categorical_features=[1])
 X = onehotencoder.fit_transform(X).toarray()
-
+# Dummy variable trap
 X = X[:,1:]
 
 # Splitting the dataset
@@ -40,3 +40,30 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
+
+# Importing Keras library and packages
+import keras
+# Importing the Sequential module to make sequential model
+from keras.models import Sequential
+# Importing the type of layer we'll be using
+from keras.layers import Dense
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
