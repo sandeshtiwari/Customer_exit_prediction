@@ -60,6 +60,8 @@ classifier.add(Dense(units = 6, activation='relu', kernel_initializer = 'uniform
 # Adding the output layer
 classifier.add(Dense(units = 1, activation='sigmoid', kernel_initializer = 'uniform'))
 
+# Compiling the ANN
+classifier.compile(optimizer="adam", loss="binary_crossentropy", metrics = ["accuracy"])
 
 
 
