@@ -69,6 +69,7 @@ classifier.fit(x=X_train, y=y_train, batch_size=10, epochs=100)
 
 # Predicting the Test set results
 y_predict = classifier.predict(X_test)
+y_predict = (y_predict > 0.5)
 
 
 
