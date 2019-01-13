@@ -48,6 +48,8 @@ from keras.models import Sequential
 # Importing the type of layer we'll be using
 from keras.layers import Dense
 
+# Initialising the ANN
+
 
 
 
