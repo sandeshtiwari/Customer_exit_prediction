@@ -71,6 +71,9 @@ classifier.fit(x=X_train, y=y_train, batch_size=10, epochs=100)
 y_predict = classifier.predict(X_test)
 y_predict = (y_predict > 0.5)
 
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_predict)
+
 
 
 
