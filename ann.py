@@ -71,8 +71,33 @@ classifier.fit(x=X_train, y=y_train, batch_size=10, epochs=100)
 y_predict = classifier.predict(X_test)
 y_predict = (y_predict > 0.5)
 
+"""Predict if a single customer with the following information will leave the bank:
+    Geography: France
+    Credit score: 600
+    Gender: Male
+    Age: 40
+    Tenure: 3
+    Balance: 60000
+    Number of Products: 2
+    Has Credit Card: Yes
+    Is Active Member: Yes
+    Estimated Salary: 50000
+"""
+new_prediction = classifier.predict(sc_X.transform(np.array([[0.0,0,600,1,40,3,60000,2,1,1,50000]])))
+new_prediciton = (new_prediction > 0.5)
+
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_predict)
+
+
+
+
+
+
+
+
+
+
 
 
 
